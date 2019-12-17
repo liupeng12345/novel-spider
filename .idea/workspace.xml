@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a9016ff-a826-4c56-9aa0-7099484d79ec" name="Default Changelist" comment="" />
+    <list default="true" id="4a9016ff-a826-4c56-9aa0-7099484d79ec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/novel.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/config/novel.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/config/search.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/config/serverconfig.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/config/service.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/items.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/middlewares.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/pipelines.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/spiders/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/spiders/chapter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/spiders/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/spiders/content.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/spiders/search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/spiders/serchServer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/spiders/sort.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/spiders/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/novel/spiders/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrapy.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/People.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test2.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,13 +42,18 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1UPY4MPqIzRdzzNmXP1Xs8Ba9ox" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -29,7 +62,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RunManager" selected="Python.test">
     <configuration name="message" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -164,7 +197,7 @@
       <workItem from="1576034112182" duration="2777000" />
       <workItem from="1576041243663" duration="25703000" />
       <workItem from="1576323539209" duration="1254000" />
-      <workItem from="1576497614072" duration="3019000" />
+      <workItem from="1576497614072" duration="3193000" />
     </task>
     <servers />
   </component>
@@ -172,22 +205,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1323" height="273" key="GridCell.Tab.0.bottom" timestamp="1576465473531">
+    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1576553319209">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="273" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576465473531" />
-    <state width="1323" height="273" key="GridCell.Tab.0.center" timestamp="1576465473530">
+    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1576553319209" />
+    <state width="1323" height="238" key="GridCell.Tab.0.bottom" timestamp="1576553162147">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="273" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1576465473530" />
-    <state width="1323" height="273" key="GridCell.Tab.0.left" timestamp="1576465473530">
+    <state width="1323" height="238" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576553162147" />
+    <state width="1323" height="238" key="GridCell.Tab.0.center" timestamp="1576553162146">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="273" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1576465473530" />
-    <state width="1323" height="273" key="GridCell.Tab.0.right" timestamp="1576465473531">
+    <state width="1323" height="238" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1576553162146" />
+    <state width="1323" height="238" key="GridCell.Tab.0.left" timestamp="1576553162146">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="273" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1576465473531" />
+    <state width="1323" height="238" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1576553162146" />
+    <state width="1323" height="238" key="GridCell.Tab.0.right" timestamp="1576553162147">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="238" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1576553162147" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1576553321388">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1576553321388" />
     <state x="363" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1576497613962">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
