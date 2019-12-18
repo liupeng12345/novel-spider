@@ -72,6 +72,6 @@ class NovelSearchSpider(scrapy.Spider):
         search_novel["status"] = filter_null2(response.xpath(dd["novelStatus"]).extract(),
                                               search_novel["status"])
         print(search_novel)
-        search_novel_str = json.dumps(search_novel)
+        search_novel_str = json.dumps(dict(search_novel), ensure_ascii=False)
         r.sadd("novel:" + self.key, search_novel_str)
         yield search_novel
