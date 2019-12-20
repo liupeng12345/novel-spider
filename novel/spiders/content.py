@@ -28,9 +28,9 @@ class NovelContentSpider(scrapy.Spider):
             dd = get_config(website, config_list)
             content = {"content": strengthen(
                 "".join(response.xpath(dd["contentInfo"] + "/text()" + "|" + dd["contentInfo"] + "/*").extract())),
-                       "nextPage": "",
-                       "prePage": ""
-                       }
+                "nextPage": "",
+                "prePage": ""
+            }
             if not response.xpath(dd["contentPreciousPage"]).extract()[0].startswith("http"):
                 content["prePage"] = dd["websiteUrl"] + response.xpath(dd["contentPreciousPage"]).extract()[0]
                 content["nextPage"] = dd["websiteUrl"] + response.xpath(dd["contentNextPage"]).extract()[0]
@@ -45,4 +45,9 @@ class NovelContentSpider(scrapy.Spider):
             reContent["novelUrl"] = get_chapter_url(response.url)
             reContent["contentUrl"] = response.url
             reContent["contentInfo"] = contentStr
-            # yield scrapy.Request(content["nextPage"], callback=self.parse)
+            if response.meta.__contains__('next'):
+                nextNumber = response.meta["next"] - 1
+            else:
+                nextNumber = 3
+            if nextNumber > 0:
+                yield scrapy.Request(content["nextPage"], callback=self.parse, meta={"next": nextNumber})
