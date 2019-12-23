@@ -1,7 +1,8 @@
+import subprocess
+import threading
 import time
-import pika, os
-from urllib.request import quote
-from threading import Thread
+
+import pika
 
 
 class MQBase(object):
@@ -150,13 +151,13 @@ def consumer_handler(num):
             return
         if t_key.startswith("key"):
             t_key = t_key[3:]
-            os.system("scrapy crawl search  -a key=%s" % t_key)
+            subprocess.Popen("scrapy crawl search  -a key=%s &" % t_key, shell=True)
         elif t_key.startswith("chapter"):
             t_key = t_key[len("chapter"):]
-            os.system("scrapy crawl chapter -a chapter=%s" % t_key)
+            subprocess.Popen("scrapy crawl chapter -a chapter=%s &" % t_key, shell=True)
         else:
             t_key = t_key[len("content"):]
-            os.system("scrapy crawl content -a content=%s" % t_key)
+            subprocess.Popen("scrapy crawl content -a content=%s &" % t_key, shell=True)
 
     receiver = MQReceiver2(host='localhost',
                            port=5672,
@@ -165,15 +166,14 @@ def consumer_handler(num):
                            exchange_type='direct',
                            ack=True,
                            persist=True)
-
     receiver.start('novel.spider.cancel', func)
 
 
 def main():
-    for i in range(3):
-        Thread(target=consumer_handler(i)).start()
+    for i in range(8):
+        threading.Thread(target=consumer_handler, args=(i + 1,)).start()
 
-# Thread(target=producer_handler).start()  # 生产者
+    # Thread(target=producer_handler).start()  # 生产者
 
 
 if __name__ == '__main__':
