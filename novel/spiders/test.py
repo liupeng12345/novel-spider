@@ -151,13 +151,13 @@ def consumer_handler(num):
             return
         if t_key.startswith("key"):
             t_key = t_key[3:]
-            subprocess.Popen("scrapy crawl search  -a key=%s &" % t_key, shell=True)
+            subprocess.Popen("scrapy crawl search  -a key=%s" % t_key, shell=True)
         elif t_key.startswith("chapter"):
             t_key = t_key[len("chapter"):]
-            subprocess.Popen("scrapy crawl chapter -a chapter=%s &" % t_key, shell=True)
+            subprocess.Popen("scrapy crawl chapter -a chapter=%s" % t_key, shell=True)
         else:
             t_key = t_key[len("content"):]
-            subprocess.Popen("scrapy crawl content -a content=%s &" % t_key, shell=True)
+            subprocess.Popen("scrapy crawl content -a content=%s" % t_key, shell=True)
 
     receiver = MQReceiver2(host='localhost',
                            port=5672,

@@ -71,6 +71,7 @@ ROBOTSTXT_OBEY = False
 ITEM_PIPELINES = {
     'novel.pipelines.NovelPipeline': 300,
     'novel.pipelines.ChaptersPipeline': 400,
+    'novel.pipelines.ContentPipeline': 350,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -93,6 +94,6 @@ ITEM_PIPELINES = {
 # HTTPCACHE_DIR = 'httpcache'
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-DOWNLOAD_TIMEOUT = 3
+DOWNLOAD_TIMEOUT = 4
 RETRY_ENABLED = True
-RETRY_TIMES = 100
+RETRY_TIMES = 10

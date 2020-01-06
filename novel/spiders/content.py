@@ -45,9 +45,11 @@ class NovelContentSpider(scrapy.Spider):
             reContent["novelUrl"] = get_chapter_url(response.url)
             reContent["contentUrl"] = response.url
             reContent["contentInfo"] = contentStr
+            yield reContent
             if response.meta.__contains__('next'):
                 nextNumber = response.meta["next"] - 1
             else:
                 nextNumber = 3
             if nextNumber > 0:
                 yield scrapy.Request(content["nextPage"], callback=self.parse, meta={"next": nextNumber})
+

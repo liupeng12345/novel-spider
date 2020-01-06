@@ -2,6 +2,7 @@ import re
 
 
 def get_web_site(url):
+    print(url)
     url = re.search(r'(https://.*?)/.*', url).group(1)
     return url
 
