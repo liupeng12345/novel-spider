@@ -1,8 +1,9 @@
 # 搜索爬虫
-
+import hashlib
 from urllib.parse import quote
 import scrapy
 import json
+
 from novel.spiders.config import *
 from novel.spiders.utils import *
 from novel.items import NovelItem
@@ -71,6 +72,7 @@ class NovelSearchSpider(scrapy.Spider):
                                                    search_novel["chaptersUrl"])
         search_novel["status"] = filter_null2(response.xpath(dd["novelStatus"]).extract(),
                                               search_novel["status"])
+        search_novel["_id"] = hashlib.md5(search_novel["url"].encode(encoding='utf-8')).hexdigest()
         print(search_novel)
         search_novel_str = json.dumps(dict(search_novel), ensure_ascii=False)
         r.sadd("novel:" + self.key, search_novel_str)
