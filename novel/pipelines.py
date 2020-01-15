@@ -118,7 +118,13 @@ class ChaptersPipeline(object):
         :param out:
         :return:
         """
-        self.mongodb[self.mongo_col].insert(dict(item))
+
+        myquery = {"_id": item._id}
+        find = self.mongodb[self.mongo_col].find(myquery)
+        if find is None:
+            self.mongodb[self.mongo_col].insert(dict(item))
+        else:
+            self.mongodb[self.mongo_col].update(myquery, dict(item))
         reactor.callFromThread(out.callback, item)
 
 

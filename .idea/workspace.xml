@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a9016ff-a826-4c56-9aa0-7099484d79ec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/novel/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/novel/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/novel/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/novel/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/novel/spiders/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/novel/spiders/search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/novel/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/novel/pipelines.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +39,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Python.IdWorkerUtil">
+  <component name="RunManager" selected="Python.test">
     <configuration name="IdWorkerUtil" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="novel" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -198,7 +196,8 @@
       <workItem from="1576041243663" duration="25703000" />
       <workItem from="1576323539209" duration="1254000" />
       <workItem from="1576497614072" duration="24905000" />
-      <workItem from="1576811659389" duration="40441000" />
+      <workItem from="1576811659389" duration="43514000" />
+      <workItem from="1579073814017" duration="1228000" />
     </task>
     <servers />
   </component>
@@ -210,22 +209,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1576553319209" />
-    <state width="1323" height="251" key="GridCell.Tab.0.bottom" timestamp="1578388448697">
+    <state width="1323" height="145" key="GridCell.Tab.0.bottom" timestamp="1578392388743">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="251" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578388448697" />
-    <state width="1323" height="251" key="GridCell.Tab.0.center" timestamp="1578388448697">
+    <state width="1323" height="145" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578392388743" />
+    <state width="1323" height="145" key="GridCell.Tab.0.center" timestamp="1578392388742">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="251" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1578388448697" />
-    <state width="1323" height="251" key="GridCell.Tab.0.left" timestamp="1578388448697">
+    <state width="1323" height="145" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1578392388742" />
+    <state width="1323" height="145" key="GridCell.Tab.0.left" timestamp="1578392388741">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="251" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1578388448697" />
-    <state width="1323" height="251" key="GridCell.Tab.0.right" timestamp="1578388448697">
+    <state width="1323" height="145" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1578392388741" />
+    <state width="1323" height="145" key="GridCell.Tab.0.right" timestamp="1578392388743">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="251" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1578388448697" />
+    <state width="1323" height="145" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1578392388743" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1577332784564">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -234,10 +233,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1578387974011" />
-    <state x="363" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1576497613962">
+    <state x="363" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1579073833020">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="363" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1576497613962" />
+    <state x="363" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579073833020" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/novel$message.coverage" NAME="message Coverage Results" MODIFIED="1575616947520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/novel/spiders" />
@@ -245,6 +244,6 @@
     <SUITE FILE_PATH="coverage/novel$serchServer.coverage" NAME="serchServer Coverage Results" MODIFIED="1575876710570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/novel/spiders" />
     <SUITE FILE_PATH="coverage/novel$IdWorkerUtil.coverage" NAME="IdWorkerUtil Coverage Results" MODIFIED="1578387630997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/novel/util" />
     <SUITE FILE_PATH="coverage/novel$test211.coverage" NAME="test211 Coverage Results" MODIFIED="1578374037518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/novel/spiders" />
-    <SUITE FILE_PATH="coverage/novel$test.coverage" NAME="test Coverage Results" MODIFIED="1578388448689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/novel/spiders" />
+    <SUITE FILE_PATH="coverage/novel$test.coverage" NAME="test Coverage Results" MODIFIED="1579075059351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/novel/spiders" />
   </component>
 </project>
