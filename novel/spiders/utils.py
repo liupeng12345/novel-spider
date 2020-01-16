@@ -3,7 +3,7 @@ import re
 
 def get_web_site(url):
     print(url)
-    url = re.search(r'(https://.*?)/.*', url).group(1)
+    url = re.search(r'(http.*?://.*?)/.*', url).group(1)
     return url
 
 
@@ -51,5 +51,15 @@ def strengthen(ztrs):
     return re.sub(r"<br.*?>", "\n", ztrs)
 
 
+def handleContentUr(contentUrl, url):
+    # 截取
+    if "index" in url:
+        return ""
+    contentUrl = re.search(r'(http.*?://.*)/.+', contentUrl).group(1)
+    if '/' in url:
+        url = re.search(r".*/(.*)", url).group(1)
+    return contentUrl + "/" + url
+
+
 if __name__ == '__main__':
-    print(delete_char("https://www.biquge.com.cn/book/30904", "163999.html"))
+    handleContentUr("https://www.9awx.com/book/76/76302/22208571.html")

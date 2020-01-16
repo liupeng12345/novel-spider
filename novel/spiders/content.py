@@ -23,22 +23,14 @@ class NovelContentSpider(scrapy.Spider):
             [urllib.parse.unquote(content)]
 
     def parse(self, response):
+        print(response.url)
         if response.url.endswith("html"):
             website = get_web_site(response.url)
             dd = get_config(website, config_list)
             content = {"content": strengthen(
                 "".join(response.xpath(dd["contentInfo"] + "/text()" + "|" + dd["contentInfo"] + "/*").extract())),
-                "nextPage": "",
-                "prePage": ""
-            }
-            if not response.xpath(dd["contentPreciousPage"]).extract()[0].startswith("http"):
-                content["prePage"] = dd["websiteUrl"] + response.xpath(dd["contentPreciousPage"]).extract()[0]
-                content["nextPage"] = dd["websiteUrl"] + response.xpath(dd["contentNextPage"]).extract()[0]
-            else:
-                content["prePage"] = response.xpath(dd["contentPreciousPage"]).extract()[0]
-                content["nextPage"] = response.xpath(dd["contentNextPage"]).extract()[0]
-
-            print(content)
+                "nextPage": handleContentUr(response.url, response.xpath(dd["contentNextPage"]).extract()[0]),
+                "prePage": handleContentUr(response.url, response.xpath(dd["contentPreciousPage"]).extract()[0])}
             contentStr = json.dumps(content, ensure_ascii=False)
             r.set(response.url.replace("/", ":"), contentStr)
             reContent = Content()
@@ -50,6 +42,6 @@ class NovelContentSpider(scrapy.Spider):
                 nextNumber = response.meta["next"] - 1
             else:
                 nextNumber = 3
-            if nextNumber > 0:
+            print(content["nextPage"])
+            if nextNumber > 0 and content["nextPage"] is not None:
                 yield scrapy.Request(content["nextPage"], callback=self.parse, meta={"next": nextNumber})
-
