@@ -132,7 +132,7 @@ def producer_handler():
     for msg in range(18):
         print('producer send %s' % msg)
 
-        sender = MQSender(host='localhost',
+        sender = MQSender(host='cloud-novel-rabbitmq',
                           port=5672,
                           exchange='test_exchange',
                           exchange_type='direct',
@@ -159,7 +159,7 @@ def consumer_handler(num):
             t_key = t_key[len("content"):]
             subprocess.Popen("scrapy crawl content -a content=%s" % t_key, shell=True)
 
-    receiver = MQReceiver2(host='localhost',
+    receiver = MQReceiver2(host='cloud-novel-rabbitmq',
                            port=5672,
                            virtual_host="/novel",
                            exchange='novel.spider.direct',

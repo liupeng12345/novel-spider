@@ -1,6 +1,6 @@
 import pymysql
 
-db = pymysql.connect('dev', 'root', 'root', 'novel')
+db = pymysql.connect('db-novel-mysql', 'root', 'root', 'novel')
 cursor = db.cursor()
 sql = """
     select

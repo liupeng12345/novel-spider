@@ -9,7 +9,7 @@ from novel.spiders.utils import *
 from novel.items import NovelItem
 import redis
 
-pool = redis.ConnectionPool(host='dev', port=6379, decode_responses=True)
+pool = redis.ConnectionPool(host='cloud-redis', port=6379, decode_responses=True)
 r = redis.Redis(connection_pool=pool)
 config_list = get_novel_spider_config_list()
 

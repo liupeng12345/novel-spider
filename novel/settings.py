@@ -14,7 +14,7 @@ BOT_NAME = 'novel'
 SPIDER_MODULES = ['novel.spiders']
 NEWSPIDER_MODULE = 'novel.spiders'
 
-MONGO_URI = 'mongodb://127.0.0.1:27017/'
+MONGO_URI = 'mongodb://db-novel-mongo:27017/'
 MONGO_DB = 'novel'
 MONGO_NOVEL_COL = 'novel_list'
 MONGO_CHAPTER_COL = 'novel_chapters'
